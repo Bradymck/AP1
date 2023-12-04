@@ -7,6 +7,7 @@ import tracemalloc
 import warnings
 from datetime import datetime, timedelta
 import discord
+#🐸discord.py
 import openai
 import pinecone
 import pymongo
