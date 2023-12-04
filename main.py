@@ -6,7 +6,6 @@ import traceback
 import tracemalloc
 import warnings
 from datetime import datetime, timedelta
-
 import discord
 import openai
 import pinecone
