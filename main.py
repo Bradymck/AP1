@@ -187,12 +187,12 @@ class PineconeClient:
   # When "#Quest" prompt is received, bot should respond with data regarding "quest" it has in pinecone database
 
   def __init__(self, PINECONE_API_KEY, PINECONE_INDEX_NAME, PINECONE_ENVIRONMENT):
-
+    
     print("Initializing PineconeClient...")
     self.pc = Pinecone(
     api_key=PINECONE_API_KEY
 )
-
+    
     pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
     self.index_name = PINECONE_INDEX_NAME
 
@@ -219,7 +219,7 @@ class PineconeClient:
           pinecone.create_index(self.index_name, dimension=len(embeds[0]['embedding']))
           index = pinecone.Index(self.index_name)
           print("Index created: ", self.index_name)
-
+        
       def summarize(self, keyword, user_id):
         print("Fetching from Pinecone...")
         index = pinecone.Index(self.index_name)
